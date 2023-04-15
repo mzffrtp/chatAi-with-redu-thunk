@@ -1,7 +1,8 @@
 import React, {useState} from "react";
-import {Container, Button} from "react-bootstrap"
+import {Container, Button, Row} from "react-bootstrap"
 import ChatAi from "../../components/chatAi"
 import ImageAi from "../../components/ImageAi"
+import styles from "../homePage/homePage.module.css"
 
 
 export default function HomePage() {
@@ -9,9 +10,12 @@ export default function HomePage() {
     const handleClick = () => { 
         setIsChatMode(!isChatMode)}
         return (
-            <Container className="my-5">
-                <h1>Just Imagine</h1>
-                <Button onClick={handleClick}>
+            <Container className="my-3">
+                <Row className="d-flex justify-content-center">
+                <h1 className="text-center my-3">Just Imagine</h1>
+                <Button 
+                className="w-50"
+                onClick={handleClick}>
                     {
                         isChatMode ? "Go to ImageAI" : "Go to ChatAI"
                     }
@@ -21,6 +25,8 @@ export default function HomePage() {
                         isChatMode ? <ChatAi /> : <ImageAi />
                     }
                 </Container>
+                </Row>
+                
             </Container>
             
         )
