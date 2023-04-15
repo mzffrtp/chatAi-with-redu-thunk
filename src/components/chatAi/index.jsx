@@ -2,8 +2,7 @@ import React from "react"
 import { Container, Form, InputGroup, Button, Row } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import styles from "../chatAi/chatAi.module.css";
-import { ActionTypes } from "../../redux/constants/actionTypes";
-import { getDataStart } from "../../redux/actions/chatActions";
+import { getAnswer, getDataStart } from "../../redux/actions/chatActions";
 
 
 export default function ChatAi() {
@@ -12,6 +11,7 @@ export default function ChatAi() {
 
     const handleSubmit = () => {
         dispatch(getDataStart());
+        dispatch(getAnswer());
     }
     return (
         <Container className=" my-3 justify-content-center border border-warning shadow p-3 mb-5 rounded">
