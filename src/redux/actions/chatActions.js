@@ -6,7 +6,7 @@ export const getDataStart = () => ({
     payload: true
 });
 
-export const getAnswer = () => async (dispatch) => {
+export const getAnswer = (promt) => async (dispatch) => {
     const options = {
         method: 'POST',
         url: 'https://openai80.p.rapidapi.com/chat/completions',
@@ -15,12 +15,14 @@ export const getAnswer = () => async (dispatch) => {
             'X-RapidAPI-Key': '529011e247msh7c7a8f92b4b961dp11b1b2jsn04e415593b02',
             'X-RapidAPI-Host': 'openai80.p.rapidapi.com'
         },
-        data: '{"model":"gpt-3.5-turbo","messages":[{"role":"user","content":"Hello!"}]}'
+        data: `{"model":"gpt-3.5-turbo","messages":[{"role":"user","content":"${promt}"}]}`
     };
 
     const res = await axios.request(options);
     dispatch({
         type: ActionTypes.GET_ANSWER,
-        payload:res.data.choices[0].message.content
+        payload:{
+            promt, 
+            answer:res.data.choices[0].message.content}
     })
 }

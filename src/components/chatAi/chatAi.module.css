@@ -12,14 +12,36 @@
     padding: 20px;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
     height: 50vh;
     overflow: auto;
     margin-bottom: 1rem;
+}
+
+.promt {
+    align-self: flex-start;
+    background-color:#98FF98 ;
+    padding: 1rem;
+    border-radius: 1rem;
+    font-size: 1.1rem;
+    text-align: justify;
+    margin: 0.5rem;
+
+}
+
+.answer {
+    align-self: flex-end;
+    background-color:#FFFFE0 ;
+    padding: 1rem;
+    border-radius: 1rem;
+    font-size: 1.1rem;
+    text-align: justify;
+    margin: 0.5rem;
+
 }
 
 .form {
     display: flex;
     justify-content: center;
 }
+
 

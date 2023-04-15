@@ -1,7 +1,8 @@
 import { ActionTypes } from "../constants/actionTypes";
 
 const initialState = {
-    data: [],
+    chatData: [],
+    imageData: [],
     isLoading: false
 }
 
@@ -15,7 +16,7 @@ export const chatReducer = (state = initialState, {type, payload}) => {
         case ActionTypes.GET_ANSWER:
             return{
                 ...state,
-                data: payload,
+                chatData: [...state.chatData, payload ],
                 isLoading: false
             };
     default:

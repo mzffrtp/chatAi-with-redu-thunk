@@ -12,8 +12,9 @@ export default function HomePage() {
         return (
             <Container className={styles.chatBot}>
                 <Row className="d-flex justify-content-center">
-                <h1 className="text-center">Just Imagine</h1>
-                <Button 
+                <h1 
+                className={`text-center ${isChatMode ? styles.chatText : styles.imageText}`}>Just Imagine</h1>
+                <Button variant = "outline-warning" 
                 className="w-50"
                 onClick={handleClick}>
                     {

@@ -15,7 +15,9 @@ export default function App() {
     <Container className={
       isDark ? "bg-light" : "bg-dark"
     }>
-      <Button className="mt-1"><label className="switch">
+      <Button 
+      variant="outline-danger"
+      className="mt-2 ms-3"><label className="switch">
         <input 
         onClick={handleThemeToogle}
         type="checkbox" />
