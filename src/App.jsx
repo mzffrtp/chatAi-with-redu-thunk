@@ -2,20 +2,20 @@ import React from "react"
 import { useState } from "react";
 import { Button, Container } from "react-bootstrap"
 import HomePage from "./pages/homePage";
-import styles from "./assets/App.css"
-
+import "../src/assets/App.css";
 
 export default function App() {
   const [isDark, setIsDark] = useState(false)
+  
   const handleThemeToogle = () => {
     setIsDark(!isDark)
     console.log(isDark);
   }
   return (
-    <Container fluid className={
-      isDark ? "bg-dark" : "bg-light"
+    <Container className={
+      isDark ? "bg-light" : "bg-dark"
     }>
-      <Button><label className="switch">
+      <Button className="mt-1"><label className="switch">
         <input 
         onClick={handleThemeToogle}
         type="checkbox" />

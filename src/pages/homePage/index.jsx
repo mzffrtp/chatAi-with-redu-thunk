@@ -10,14 +10,14 @@ export default function HomePage() {
     const handleClick = () => { 
         setIsChatMode(!isChatMode)}
         return (
-            <Container className="my-3">
+            <Container className={styles.chatBot}>
                 <Row className="d-flex justify-content-center">
-                <h1 className="text-center my-3">Just Imagine</h1>
+                <h1 className="text-center">Just Imagine</h1>
                 <Button 
                 className="w-50"
                 onClick={handleClick}>
                     {
-                        isChatMode ? "Go to ImageAI" : "Go to ChatAI"
+                        isChatMode ? "Try ImageAI" : "Try ChatAI"
                     }
                 </Button>
                 <Container>

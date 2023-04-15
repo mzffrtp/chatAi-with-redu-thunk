@@ -1,6 +1,25 @@
-
-.chatWrapper {
+.chat {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
     height: 90%;
-    border:1px solid red
-
 }
+
+.list {
+    background-color: rgb(149, 223, 245);
+    flex-grow: 1;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    height: 50vh;
+    overflow: auto;
+    margin-bottom: 1rem;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+}
+
