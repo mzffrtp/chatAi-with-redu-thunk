@@ -1,10 +1,9 @@
 import React, {useState} from "react";
 import {Container, Button, Row} from "react-bootstrap"
 import ChatAi from "../../components/chatAi"
+import Footer from "../../components/footer";
 import ImageAi from "../../components/ImageAi"
 import styles from "../homePage/homePage.module.css"
-
-
 
 export default function HomePage() {
     const [isChatMode, setIsChatMode] = useState(true)
@@ -28,7 +27,7 @@ export default function HomePage() {
                     }
                 </Container>
                 </Row>
-                
+                <Footer />
             </Container>
             
         )
