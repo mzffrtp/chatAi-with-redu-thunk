@@ -36,7 +36,16 @@
     font-size: 1.1rem;
     text-align: justify;
     margin: 0.5rem;
-
+}
+.imageAnswer {
+    align-self: flex-end;
+    background-color:#FFFFE0 ;
+    padding: 1rem;
+    border-radius: 1rem;
+    font-size: 1.1rem;
+    text-align: justify;
+    margin: 0.5rem;
+    max-width: 20rem;
 }
 
 .form {

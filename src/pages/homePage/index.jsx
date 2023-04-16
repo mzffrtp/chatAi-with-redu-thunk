@@ -5,6 +5,7 @@ import ImageAi from "../../components/ImageAi"
 import styles from "../homePage/homePage.module.css"
 
 
+
 export default function HomePage() {
     const [isChatMode, setIsChatMode] = useState(true)
     const handleClick = () => { 

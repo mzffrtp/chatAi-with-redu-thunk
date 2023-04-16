@@ -2,8 +2,9 @@ import React from "react"
 import { Container, Form, InputGroup, Button, Row } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import styles from "../chatAi/chatAi.module.css";
-import { getAnswer, getDataStart } from "../../redux/actions/chatActions";
+import { clearScreen, getAnswer, getDataStart } from "../../redux/actions/chatActions";
 import { useState } from "react";
+
 
 export default function ChatAi() {
     const dispatch = useDispatch();
@@ -18,6 +19,10 @@ export default function ChatAi() {
     }
     const handleChange = (e) => {
         setPromt(e.target.value);
+    }
+
+    const handleClear = () => {
+        dispatch(clearScreen());
     }
 
     console.log(chatState);
@@ -50,9 +55,12 @@ export default function ChatAi() {
                     value={promt}
                         onChange={handleChange}
                         placeholder="Type your question!"></Form.Control>
-                    <Button variant="outline-success"
+                    <Button 
+                    variant="outline-success"
                         type="submit"
                         onClick={handleSubmit}>ASK</Button>
+                    <Button variant="outline-danger"
+                        onClick={handleClear}>CLEAR</Button>
                 </InputGroup>
             </Container>
         </Container>

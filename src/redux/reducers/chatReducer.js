@@ -19,6 +19,19 @@ export const chatReducer = (state = initialState, {type, payload}) => {
                 chatData: [...state.chatData, payload ],
                 isLoading: false
             };
+        case ActionTypes.CLEAR_SCREEN:
+            return {
+                ...state,
+                chatData: [],
+                imageData: []
+            }
+        case ActionTypes.GET_IMAGE:
+            return{
+                ...state,
+                imageData: [...state.imageData, payload],
+                isLoading:false
+
+            }
     default:
         return state;
     }
