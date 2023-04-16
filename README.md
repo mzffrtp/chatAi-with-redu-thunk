@@ -1,10 +1,10 @@
 Hallooojjjj
 
-an open ai project with reduc thunk middleware
+an open ai project with redux thunk middleware
     - created with react vite
     - redux thunk was integreated for managing async actions types
     - user can ask questions and fetch pictures
-    - vserach by arious language options
+    - search by various language options
     - darke and ligt theme mode
 
 \{^_^}/  enjoy screen gif \{^_^}/ 
